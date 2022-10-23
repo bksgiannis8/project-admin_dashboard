@@ -1,0 +1,13 @@
+body {
+    background-color: black;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    margin-left: 13%;
+    margin-right: 13%;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr, 4fr;
+}
+
