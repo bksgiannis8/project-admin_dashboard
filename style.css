@@ -42,10 +42,12 @@ body {
 
 .toolbar {
     height: 6fr;
+    font-size: larger;
 }
 
 .settingsbar {
     height: 8fr;
+    font-size: larger;
 }
 
 .settingsbar div {
