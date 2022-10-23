@@ -8,6 +8,10 @@ body {
     margin-right: 13%;
     background-color: white;
     display: grid;
+    height: 1fr;
     grid-template-columns: 1fr, 4fr;
+    grid-template-rows: 1fr, 5fr;
 }
+
+
 
