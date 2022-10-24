@@ -4,13 +4,13 @@ body {
 }
 
 .container {
-    margin-left: 13%;
-    margin-right: 13%;
+    /*margin-left: 13%;
+    margin-right: 13%;*/
+    box-sizing: border-box;
     background-color: white;
     display: grid;
-    height: 100%;
     grid-template-columns: 1fr, 4fr;
-    grid-template-rows: 1fr, 5fr;
+    grid-template-rows: 1fr, 6fr;
 }
 
 
@@ -22,7 +22,8 @@ body {
     grid-column: 1/2;
     grid-row: 1/3;
     display: grid;
-    grid-template-rows: 1fr, 6fr, 8fr;
+    box-sizing: border-box;
+    grid-template-rows: 1fr, 3fr, 3fr;
     grid-gap: 30px;
     font-weight: bold;
 }
@@ -70,75 +71,116 @@ body {
 .header {
     grid-row: 1/2;
     display: grid;
-    grid-template-rows: 1fr, 1.5fr;
+    grid-template-rows: 70px 80px;
 }
 
 
 .header img {
-    max-height: 90%;
-    max-width: 90%;
+    max-height: 70%;
+    max-width: 30%;
     border-radius: 50%;
 }
 
 .up {
     grid-row: 1/2;
     display: grid;
-    grid-template-columns: 2fr, 1fr;
+    grid-template-columns: 1fr, 0.5fr;
+    max-height: 20%;
+    padding: 10px;
+    margin-bottom: 0;
 }
 
 .up_left {
     grid-column: 1/2;
-    display: grid;
-    grid: 1fr, 16fr;
+    display: flex;
+    grid: 0.2fr, 1fr;
+    align-items: center;
+    justify-content: start;
+    padding-left: 30px;
 }
 
 .up_left i {
     grid-column: 1/2;
+    margin-right: 20px;
 }
 
 .up_left input {
     grid-column: 2/3;
-    border-radius: 10%;
+    border-radius: 5%;
     border-style: none;
     background-color: darkgray;
-    width: 80%;
+    width: 600px;
+    height: 30px;
 }
 
 .up_right {
     grid-column: 2/3;
-    display: grid;
-    grid-template-columns: 1fr, 1fr, 2fr;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+    
 }
 
 .up_right i {
-    grid-column: 1/2;
+    align-self: center;
 }
 
 .up_right img {
-    grid-column: 2/3;
+    height: 70px;
+
 }
 
 .up_right p {
     grid-column: 3/4;
+    font-weight: bold;
 }
 .down {
     grid-row: 2/3;
     display: grid;
-    grid-template-columns: 1fr, 1fr;
+    grid-template-columns: 1fr 1fr;
 }
 
 .down_left {
     grid-column: 1/2;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+}
+
+.down img {
+    height: 80px;
+    margin-right: 20px;
 }
 
 
 .down_right {
     grid-column: 2/3;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 40px;
+}
+
+.down p {
+    font-weight: bold;
+    font-size: small;
+}
+
+.down .big {
+    font-size: large;
 }
 
 button {
     background-color: rgb(0, 119, 255);
     color: white;
+    width: 150px;
+    height: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    font-size: larger;
+    font-weight: bold;
 }
 
 
@@ -151,7 +193,7 @@ button {
     grid-row: 2/3;
     background-color: darkgray;
     display: grid;
-    grid-template-columns: 4fr, 1fr;
+    grid-template-columns: 1fr 0.4fr;
 }
 
 .cards {
@@ -159,7 +201,7 @@ button {
     grid-column: 1/2;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.1fr 5fr 5fr 5fr;
+    grid-template-rows: 0.1fr repeat(3, 3fr);
     grid-gap: 5px;
 }
 
@@ -204,36 +246,40 @@ button {
 .right_side {
     grid-column: 2/3;
     display: grid;
+    box-sizing: border-box;
     grid-template-rows: 1fr 1fr;
 }
 
 .right_side p {
     font-size:small;
+    box-sizing: border-box;
 }
 
 .rsup {
     grid-row: 1/2;
     display: grid;
-    grid-template-rows: 1fr 6fr;
+    grid-template-rows: 1fr;
+    box-sizing: border-box;
 }
 
 .rsup h2 {
     margin-left: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 0px;
+    box-sizing: border-box;
 }
 
 .rsup .announcments {
-    grid-row: 2/3;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     background-color: white;
-    grid-gap: 5px;
+    box-sizing: border-box;
 }
 
 .announcments div{
     margin-left: 30px;
     margin-right: 30px;
     margin-bottom: 0;
+    box-sizing: border-box;
 }
 
 h3 {
@@ -244,6 +290,7 @@ h3 {
 .rsdown {
     grid-row: 2/3;
     display: grid;
+    box-sizing: border-box;
     grid-template-rows: 1fr 6fr;
 }
 
@@ -251,9 +298,44 @@ h3 {
     background-color: white;
     grid-row: 2/3;
     display: grid;
+    box-sizing: border-box;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 0;
+    padding: 5%;
+    margin-bottom: 10px;
 }
 
+#uno {
+    grid-row: 1/2;
+    display: flex;
+}
+
+#dos {
+    grid-row: 2/3;
+    display: flex;
+}
+
+#tres {
+    grid-row: 3/4;
+    display: flex;
+}
+
+#quattro {
+    grid-row: 4/5;
+    display: flex;
+}
+
+.trending img {
+    border-radius: 50%;
+    max-width: 20%;
+    max-height: 80%;
+    
+}
+
+.trending div p{
+    font-weight: bold;
+    margin-left: 10px;
+}
 
 
 
